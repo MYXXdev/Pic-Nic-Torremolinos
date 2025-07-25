@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Pic-Nic-Torremolinos/', // EXACTLY your GitHub repo name (case sensitive)
+  base: '/Pic-Nic-Torremolinos/', // Adjust if using relative base './'
 });
