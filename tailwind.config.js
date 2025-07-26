@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
@@ -16,7 +17,16 @@ export default {
           900: "#23240a",
         },
       },
+      animation: {
+        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { opacity: 0.9 },
+          '50%': { opacity: 0.7 },
+        },
+      },
     },
   },
   plugins: [],
-}
+};

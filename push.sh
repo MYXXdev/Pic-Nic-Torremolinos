@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 
-# Exit on any error
+# Exit if any command fails
 set -e
 
-# Add all changes
+echo "📦 Staging and committing changes..."
 git add .
+git commit -m "Update: $(date '+%Y-%m-%d %H:%M:%S')" || echo "⚠️ No changes to commit."
 
-# Commit with timestamp
-git commit -m "Update: $(date '+%Y-%m-%d %H:%M:%S')"
-
-# Push to main
-echo "📤 Pushing changes to main..."
+echo "📤 Pushing changes to GitHub main branch..."
 git push origin main
 
-# Deploy
-echo "🚀 Deploying the latest build to GitHub Pages..."
-./deploy.sh
+echo "🚀 Building the site..."
+npm run build
 
-echo "✅ Push & deployment complete!"
+echo "🌍 Deploying to GitHub Pages..."
+npx gh-pages -d dist
+
+echo "✅ All done! Your site is live."
