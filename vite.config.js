@@ -7,7 +7,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false, // Disable sourcemaps for smaller production builds
-    minify: 'esbuild', // Ensure minification for production
+    sourcemap: false,
+    minify: 'esbuild',
+  },
+  optimizeDeps: {
+    include: ['canvas-confetti'],
   },
 });
