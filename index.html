@@ -5,32 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pic-Nic Torremolinos</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Framer Motion CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.11.7/dist/framer-motion.min.js"></script>
-    <!-- Canvas Confetti CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <!-- Custom Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            animation: {
-              'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              pulse: {
-                '0%, 100%': { opacity: 0.9 },
-                '50%': { opacity: 0.7 },
-              },
-            },
-          },
-        },
-      };
-    </script>
   </head>
-  <body>
+  <body class="bg-white text-gray-900">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
